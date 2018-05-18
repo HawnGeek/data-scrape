@@ -31,3 +31,23 @@ print(name)
 price_box = soup.find('span', attrs={'class': 'Fw(b)'})
 price = price_box.text
 print(price)
+
+import csv
+from datetime import datetime
+
+with open('index.csv', 'a') as csv_file: 
+    writer = csv.writer(csv_file)
+    writer.writerow([name, price, datetime.now()])
+
+#notes for a while loop
+
+#input = 0
+#while input < 10:
+    #print(input)
+    #input = input + 1
+    #input +=1
+
+
+
+
+
